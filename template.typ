@@ -44,6 +44,8 @@
   show figure.where(kind: table): set figure.caption(position: top)
   set table(stroke: none, gutter:0em, align:left)
 
+
+
   // math
   set math.equation(numbering: "(1)")
   show math.equation: set block(spacing: 0.65em)

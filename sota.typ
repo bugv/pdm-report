@@ -38,6 +38,7 @@ While most literature focuses on diffusion in modeling reaction kinetics, nuclea
 However, its impact remains unclear. 
 
 == Soft chemistry routes
+<s_sota_soft>
 
 // CHECK REFERENCES FOR THIS WHOLE SECTION
 
@@ -45,6 +46,7 @@ Altenatively to solid state synthesis routes, soft chemistry routes, which evolv
 We can broadly split these soft chemistry routes into two subcategories :
 + Topochemical routes. In this case the crystal structure of a parent phase is chemically modified while keeping a similar lattice structure, bypassing the need for nucleation. This route inclues ion exchange, (de)hydration, (de)intercalation routes where typically small ions (eg. H, Li) are added, removed, or swapped in a crystal structure. @parija2018TraversingEnergy These reactions are also kinetically limited by diffusion, and evolve with continuous compositional intermediates rather than well defined phase boundaries.
   However, the small ions have fast diffusion rates, allowing for reactions at much lower temperatures than @cordova2020SynthesisMetastable // check refernces
+  #textcite(<bai2020KineticPathways>) have also shown that topochemical reaction steps may happen in traditional solid state synthesis.
 + Reactions in well mixed or fast diffusion environments. The stategy here is to shift the kinetically limiting step away from diffusion and towards either nucleation or growth, which allows for much lower reaction temperatures @parija2018TraversingEnergy @cordova2020SynthesisMetastable. This can either be achived by preforming reactions in environments with fast diffusion, ether via a molten salt (also called molten flux) which directly participates in the reaction, or in solution as is the case for hydrothermal or precipitation methods. Alternatively, diffusion can be bypassed completely by pre-mixing the precursors on the atomic scale, as is the case in the sol-gel method.
 
 Solid state metathesis, @martinolich2017ReactionbyDesignAchieving or double ion exchange, can, depending on the pathway, either be included in the topochemical route, the fast diffusion route if a molten salt forms, or, barring the previous options the traditional solid state route.
@@ -52,6 +54,7 @@ Solid state metathesis, @martinolich2017ReactionbyDesignAchieving or double ion 
 
 
 == Evidence for the solid state synthesis of metastable materials
+<s_sota_ss_meta>
 
 Recently, and driven by the rise of in-situ experiments,@shoemaker2014SituStudies some metastable phases have been identified as intermediates (or sometimes even isolated products) of traditional solid state reactions. 
 
@@ -63,7 +66,7 @@ This makes synthesis at low temperatures possible.
 However, as there is no topochemical relationship between the precursors and the products and since no LiCl flux forms for this particular synthesis route, we can consider this reaction to be solid state synthesis, and not a soft chemistry route.
 We also note that the reaction energy is far more significant than in synthesis of YMnO3 from elementary oxides, driven by the high enthalpy of formation of the LiCl salt.
 
-#textcite(<zhang2018EfficientFirstprinciples>) form the metastable polytype t-LiTiOPO4 in solid state synthesis by considering different precursor mixes with different associated reaction energies.
+#textcite(<zeng2024SelectiveFormation>) form the metastable polytype t-LiTiOPO4 in solid state synthesis by considering different precursor mixes with different associated reaction energies.
 t-LiTiOPO4, which has a lower surface energy to the sable o-LiTiOPO4 polymorph, is therefore stabilized at the nanoscale and thus has a lower nucleation barrier. 
 The barrier difference between the two polymorphs increases with overall reaction energy.
 Therefore, the authors argue that t-LiTiOPO4 can preferentially form when the reaction energy is higher, and observe through in-situ studies that t-LiTiOPO4 is observed over a wider temperature range when the reaction energy increases.

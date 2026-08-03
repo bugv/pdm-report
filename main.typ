@@ -9,7 +9,7 @@ Conditions for the solid state synthesis of phases metastable at synthesis condi
 
 #heading("Abstract",numbering: none)
 // #heading("Acknowledgements",numbering:none)
-
+// thank ZKS & Haenny. Do not thank Haenny in the version for ZKS.
 
 #outline(depth:2)
 
