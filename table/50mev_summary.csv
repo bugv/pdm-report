@@ -1,23 +1,22 @@
-Al2CuO4,63 meV/at,Stable at 0 K, @SGTE_LB
-EuAlO3,111 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-CeVO4,77 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-Eu2CuO4,212 meV/at,Stable at synthesis conditions, @kisiel2004PhaseRelations 
-Sc2Cu2O5,61 meV/at,"Stable at synthesis conditions, unstable at 0 K", @kopyto1996GibbsFree
-Ta2CuO6,71 meV/at,TBD,This work
-VCuO3,94 meV/at,NA,
-CuWO4,74 meV/at,TBD,This work
-EuFeO3,149 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-Eu2Ti2O7,70 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-Gd3Fe5O12,1963 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-Lu3Fe5O12,60 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-Fe2NiO4,82 meV/at,Stable at 0 K, @SGTE_LB
-Fe12PbO19,91 meV/at,"Stable at synthesis conditions, unstable at 0 K", @diop2010ExperimentalInvestigations
-Gd2Zr2O7,273 meV/at,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
-La2Hf2O7,448 meV/at,Stable at 0 K, @bajenova2023ExperimentalDetermination
-In2(WO4)3,56 meV/at,"Stable at synthesis conditions, unstable at 0 K", @steiner2014ThermochemistryChemical
-LaMnO3,126 meV/at,Stable at 0 K, @SGTE_LB
-La2PdO4,55 meV/at,Stable at 0 K, @jacob2002SystemLaPdO
-Mn2NiO4,343 meV/at,"Stable at synthesis conditions, unstable at 0 K", @navrotsky1968ThermodynamicsFormation
-Nd2NiO4,70 meV/at,TBD,This work
-SnWO4,52 meV/at,NA,
-Zr(WO4)2,60 meV/at,"Stable at synthesis conditions, unstable at 0 K",  @reznitskii2002EnthalpiesFormation
+Al2CuO4,Al2O3,CuO,1273, @huang2014ReductionBehaviors,63,Stable at 0 K, @SGTE_LB
+CeVO4,Ce2O3,V2O5,1373, @panchal2011ZirconMonazite,77,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
+CuWO4,CuO,WO3,973, @li2008NanosizedCopper,74,Stable at synthesis conditions,
+Eu2CuO4,Eu2O3,CuO,1373, @salame2014IBLCEffect,212,Stable at 0 K, @kisiel2004PhaseRelations 
+Eu2Ti2O7,Eu2O3,TiO2,1273, @garbout2016RelationshipStructural,70,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
+EuAlO3,Eu2O3,Al2O3,1773, @kuro2017XrayInduced,111,"Stable at synthesis conditions, unstable at 0 K", @navrotsky2015ThermodynamicsSolid
+EuFeO3,Eu2O3,Fe2O3,1373, @ju2011SolGel,149,"Stable at synthesis conditions, unstable at 0 K", @navrotsky2015ThermodynamicsSolid
+Fe12PbO19,Fe2O3,PbO,1223, @palomares-sanchez2005UseRietveld,91,"Stable at synthesis conditions, unstable at 0 K", @diop2010ExperimentalInvestigations
+Fe2NiO4,Fe2O3,NiO,1273, @du2012InfluenceV2O5,82,Stable at 0 K, @SGTE_LB
+Gd2Zr2O7,Gd2O3,ZrO2,1873, @li2013MultilayeredYSZ,273,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
+Gd3Fe5O12,Gd2O3,Fe2O3,1573, @wu2001PhaseTransformation,1963,Stable at 0 K, @navrotsky2015ThermodynamicsSolid
+In2(WO4)3,In2O3,WO3,1273, @kobayashi1998QuantitativeDemonstration,56,"Stable at synthesis conditions, unstable at 0 K", @steiner2014ThermochemistryChemical
+La2Hf2O7,La2O3,HfO2,1523, @eagleman2012LuminescenceStudy,448,Stable at 0 K, @bajenova2023ExperimentalDetermination
+La2PdO4,La2O3,PdO,1150, @jacob2002SystemLaPdO,55,Stable at 0 K, @jacob2002SystemLaPdO
+Lu3Fe5O12,Lu2O3,Fe2O3,1473, @manimuthu2015ObservationDirect,60,"Stable at synthesis conditions, unstable at 0 K", @navrotsky2015ThermodynamicsSolid
+Mn2NiO4,Mn2O3,NiO,1123, @ryu2009HighlyDense,343,"Stable at synthesis conditions, unstable at 0 K", @navrotsky1968ThermodynamicsFormation
+Nd2NiO4,Nd2O3,NiO,1213, @castro1995PhaseTransitions,70,Stable at synthesis conditions, 
+Sc2Cu2O5,Sc2O3,CuO,1673, @kakehi2003PropertiesCopperscandium,61,"Stable at synthesis conditions, unstable at 0 K", @kopyto1996GibbsFree
+SnWO4,SnO,WO3,873, @cho2009PhotophysicalPhotoelectrochemical,52,NA,
+Ta2CuO6,Ta2O5,CuO,1073, @li2015ElectricalProperties,71,Stable at synthesis conditions, 
+VCuO3,V2O5,Cu2O,923, @kamiya1998LithiumInsertion,94,NA,
+Zr(WO4)2,ZrO2,WO3,1453, @ernst1998PhononDensity,60,"Stable at synthesis conditions, unstable at 0 K",  @reznitskii2002EnthalpiesFormation

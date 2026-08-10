@@ -1,0 +1,8 @@
+50mev_summary.csv
+
+LaMnO3,La2O3,Mn2O3,1573, @yoshimatsu2015SynthesisMagnetic,126,Stable at 0 K, @SGTE_LB
+
+
+reaction_energies.csv
+
+LaMnO3,-102.7,0.0241,-109.9,*-140.6, @SGTE_LB,,,,

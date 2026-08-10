@@ -9,9 +9,9 @@
 // Fonts used in front matter, sidenotes, bibliography, and captions
 #let sans-fonts = (
     "PT Sans",
-    "Gill Sans MT",
-    "TeX Gyre Heros",
-    "Noto Sans"
+    // "Gill Sans MT",
+    // "TeX Gyre Heros",
+    // "Noto Sans"
   )
 
 
@@ -32,6 +32,7 @@
   show title: set text(font: sans-fonts)
   show heading: set text(font: sans-fonts)
   show heading.where(level: 1): set heading(supplement: [Chapter])
+  
 
 
   // figures and tables

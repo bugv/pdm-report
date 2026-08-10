@@ -26,20 +26,6 @@ This framework leads us to ask the following questions, about which we will emit
 + Which metastable phases are experimentally accessible ?
 + What are the conditions for nucleation selectivity in solid state synthesis ?
 
-== The concept of remnant metastability
-
-To comment on the experimental accesibility of metastable phases, #textcite(<sun2016ThermodynamicScale>) introduce the idea of "remnant metastability," and propose that phases observed are remnants of coniditons in which they have the lowest free energy.
-This obviously includes phases thermodynamically stable at high temperature, high pressures, in different atmospheres, strain and electromagnetic fields, or other extrenal constraints, and then quenched to room conditions, but is also understood to included phases stable at the nanoscale but not in bulk, i.e. metastable phases formed in a nucleation selective regime.
-This argument is used to argue that even hypothetical phases which are low-lying above the hull may not be experimentally acessible if there are no conditions in which they are thermodynamically favored, and propose the following criterion:  @sun2016ThermodynamicScale
-
-
-#quote(block:true)["Synthesis of novel metastable crystalline phases should target conditions where they are thermodynamically stable, and aim to kinetically retain them to conditions where metastable. If conditions of thermodynamic stability cannot be found, realization of these predicted metastable phases may not be possible."]
-
-Within the classical nucleation picture of nucleation and growth picture, this thinking is consistent. 
-However, it breaks down in the case of topochemical reactions, where the argument is much less convincing.
-Similarly, the argument for phases stable at the nanoscale is perplexing when considering the fact that there may not be conditions under which they are stable in the bulk, as, unlike other external conditions, the kinetic task is far more camplicated than simpliy "retaining" the metastable phase.
-
-However, once again splitting discrete nucleation events from the continuous behaviour of diffusion and growth, we can consider that the picture of remnant metastability by #textcite(<sun2016ThermodynamicScale>) is valid in the context of phases that require nucleation, while continuous transformations, including the growth of phases only stable at the nanoscale and ion exchange, can operate fully out of equibirium as long as their associated activation barrier as lower than the one for the nucleation of the most stable phase.
 
 
 // @aykol2018ThermodynamicLimit
