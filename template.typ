@@ -33,7 +33,8 @@
   show heading: set text(font: sans-fonts)
   show heading.where(level: 1): set heading(supplement: [Chapter])
   
-
+  // footnote
+  set footnote(numbering: "*")
 
   // figures and tables
   show figure: set figure.caption(separator: [.#h(0.5em)])

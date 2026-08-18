@@ -1,9 +1,9 @@
 #context[
 
 #set align(center)
-#set text(15pt,font : "PT Sans")
+#set text(14pt,font : "PT Sans")
 #set par(spacing: 0.65em)
-#title[Thesis title]
+#title[Synthesis of metastable phases in solid state reactions]
 
 #v(1cm)
 Victor Bugnion
@@ -52,5 +52,5 @@ image("logos/LBL_logos_bitmap/4_BL_Horiz_Pos–rgb.png",height:2cm),
 
 ]
 
-DO NOT FORGET TO MENTION THE SCHINDLER FOUNDATION IN ACKNOWLEDGEMENTS. DON'T SEND THEM THE VERSION WITH THE HAENNY FOUNDATION IN THE ACKNOWLEDGEMENTS.
+// DO NOT FORGET TO MENTION THE SCHINDLER FOUNDATION IN ACKNOWLEDGEMENTS. DON'T SEND THEM THE VERSION WITH THE HAENNY FOUNDATION IN THE ACKNOWLEDGEMENTS.
 
