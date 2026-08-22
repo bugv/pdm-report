@@ -1,24 +1,24 @@
 #import "template.typ" : *
 
 
-In this chapter, we consider the stability of ternary oxides phases predicted to be above the hull at 0 K by DFT, but which are reported in literature to be synthesized via the solid state route.
+In this chapter, we consider the stability of ternary oxide phases predicted to be above the hull at 0 K by DFT, but which are reported in literature to be synthesized via the solid state route.
 Barring any topochemical pathway and given the lack of documented impact of nucleation on solid state reaction pathways outside of #textcite(<zeng2024SelectiveFormation>), we would expect all of these phases to be stable at synthesis conditions from the remnant metastability point of view.
-In addition to testing this claim, we consider wether the predicted instability is due to 1. the inaccuracy of DFT computed energies, or 2. the fact that the phase is indeed metastable at 0 K, but is entropically stabilized at synthesis conditions.
+In addition to testing this claim, we consider whether the predicted instability is due to 1. the inaccuracy of DFT computed energies, or 2. the fact that the phase is indeed metastable at 0 K, but is entropically stabilized at synthesis conditions.
 This lets us guide principles for the screening of metastable phases in computationally driven materials discovery.
 
 == Text-mined literature dataset, Materials Project data, and relation to experimental thermochemical data
 
 // TODO OXIDE TO OXIDE IS BEST CASE
-To have a good survey of literature, we consider the text-mineddataset of solid state reactions yielding ternary oxides from #textcite(<kononova2019TextminedDataset>), which contains 3275 unique products. 
+To have a good survey of literature, we consider the text-mined dataset of solid state reactions yielding ternary oxides from #textcite(<kononova2019TextminedDataset>), which contains 3275 unique products. 
 This dataset only provides composition, while specifics on polymorphism are not.
 
-As we will be testing the validity of DFT predictions, we will consider them in the best-case senario, which as described in @s_sota_dft, is the case where elements are in similar chemical environments.
-To do so, we consider binary to ternary oxide reactions whithout oxygen release or intake, thereby conserving oxidations states and thus the chemical environment.
-Of the 3275 unique products, this leaves us with 804 condidate phases. 
+As we will be testing the validity of DFT predictions, we will consider them in the best-case scenario, which as described in @s_sota_dft, is the case where elements are in similar chemical environments.
+To do so, we consider binary to ternary oxide reactions without oxygen release or intake, thereby conserving oxidation states and thus the chemical environment.
+Of the 3275 unique products, this leaves us with 804 candidate phases. 
 
 Energy above the hull at 0 K of these 804 is taken from the lowest lying experimentally reported phase obtained for the given compositions from  Materials Project database @jain2013CommentaryMaterials, which reports DFT-computed energies at 0 K using a mixed GGA and R2SCAN functional scheme. @kingsbury2022FlexibleScalable
 
-Of these 802 phases, 162 (20%) are reported to be above the hull in the Materials Project database @jain2013CommentaryMaterials, 73 (9%) are reported to be >20 meV/at above the hull, and 27 (3%) are reported to be >50 meV/at above the hull.
+Of these 804 phases, 162 (20%) are reported to be above the hull in the Materials Project database @jain2013CommentaryMaterials, 73 (9%) are reported to be >20 meV/at above the hull, and 27 (3%) are reported to be >50 meV/at above the hull.
 Note that this does not include any metastable polymorphs, which cannot be distinguished. 
 
 We will focus on the 27 phases which are reported to be >50 meV/at above the hull, which are reported in @t_50mev_summary.
@@ -28,13 +28,18 @@ Convex hulls at 0 K are extended to higher temperatures using the Gibbs free ene
 
 #let data = csv("table/50mev_summary.csv")
 
+
 #let cellify(s) = {
   let s = s.trim()
-  if s.starts-with("@") {
-    cite(label(s.slice(1)))
-  } else {
-    s
+  let out = []
+  let last = 0
+  for m in s.matches(regex("@[\w-]+(?:[.:][\w-]+)*")) {
+    out += s.slice(last, m.start)          // plain text before the key
+    out += cite(label(m.text.slice(1)))    // the citation itself
+    last = m.end
   }
+  out += s.slice(last)                     // trailing text
+  out
 }
 
 
@@ -56,13 +61,13 @@ Convex hulls at 0 K are extended to higher temperatures using the Gibbs free ene
 
 
 To separate phases that are stable at 0 K from phases entropically stabilized at synthesis conditions and evaluate the accuracy of the DFT prediction, experimental thermochemical data must be compared with the DFT-predicted values.
-However, doing so requires comparing different different thermodynamic quantities. 
-Indeed, only standard formation enthalpies from elementary oxides $Delta H^"ox"_298$ at standard conditions (298 K, 1 atm) are can be obtained via experimental thermochemical data, while DFT reports differences in internal energies $Delta E^"ox"_0$ at 0 K and 0 atm.
+However, doing so requires comparing different thermodynamic quantities. 
+Indeed, only standard formation enthalpies from elementary oxides $Delta H^"ox"_298$ at standard conditions (298 K, 1 atm) can be obtained via experimental thermochemical data, while DFT reports differences in internal energies $Delta E^"ox"_0$ at 0 K and 0 atm.
 The impact of atmospheric pressure on the stability of solid phases is negligible, so formation internal energy $E$, given by DFT, and formation enthalpy $H$ are considered equivalent. 
 The main difference now remains that experimental enthalpies are reported at 298 K.
 @f_deviation shows that, for the three ternary oxide entries of the SGTE dataset@SGTE_LB which report enthalpy both at 0 K and 298 K, the difference between the enthalpy of formation from elementary oxides at 298 K and 0 K is under 10 meV/atom, and therefore small compared to other sources of error.
 In the case where formation enthalpies are reported at higher temperatures than 300 K, data from #textcite(<barin2008ThermochemicalData>) shown in @f_barin_deviation shows that deviations remain under 20 meV/at in the vast majority of cases up to synthesis conditions.
-This means that it is valid to compare in comparing stardard enthalpies of formation from elementary oxides to DFT-computed internal energy differences.
+Overall, this means that standard enthalpies of formation from elementary oxides are a good proxy for DFT-computed internal energy differences.
 
 #figure(
   table(columns:6, 
@@ -71,7 +76,7 @@ This means that it is valid to compare in comparing stardard enthalpies of forma
     [],[],[meV/at],[meV/at],[meV/at],[],
     table.hline(),
     [$1/2$ Li2O + $1/2$ Al2O3],[-> LiAlO2], [-134.45],[-141.59],[7.14],[-5.04%],
-    [MgO + TiO2],[-> MgTiO3],[-55.87],[-58.28],[-0.59],[1.06%],
+    [MgO + TiO2],[-> MgTiO3],[-55.87],[-58.28],[2.41],[-4.14%],
     [$1/2$ Na2O + $1/2$ Al2O3],[-> NaAlO2],[-223.76],[-225.54],[1.78],[-0.79%]
   ),
   caption:[Difference in reaction enthalpy of ternary oxides from elementary oxides at 298 K and 0 K, using experimental data from SGTE @SGTE_LB.],
@@ -105,18 +110,18 @@ The Gibbs free energy of formation at synthesis temperature (listed in @t_50mev_
     ..data.map(row => row.map(cellify)).flatten(),
      ),
   caption:[Experimental and computational reaction energies of the reactions yielding the phases in @t_50mev_summary.
-  Values reported with \* are extrapolated outside the range specified in the associated referenece. Theoretical value reported with † are from pure R2SCAN computations, while other mixed values are obtained from the mixed GGA/R2SCAN scheme from @kingsbury2022FlexibleScalable, where the elementary oxide is typically computed using R2SCAN while the ternary phase is computed using GGA.],
+  Values reported with \* are extrapolated outside the range specified in the associated reference. Theoretical value reported with † are from pure R2SCAN computations, while other mixed values are obtained from the mixed GGA/R2SCAN scheme from @kingsbury2022FlexibleScalable, where the elementary oxide is typically computed using R2SCAN while the ternary phase is computed using GGA.],
 )
 <t_ox>
 
-In the following sections, we first consider the phases which are stable at 0 K, whic we will assume are also stable at synthesis conditions.
+In the following sections, we first consider the phases which are stable at 0 K, which we will assume are also stable at synthesis conditions.
 Then, we will consider the phases which are unstable at 0 K and discuss their stability at synthesis conditions. 
-Finally, wi will discuss phases for which experimental thermochemical data is not available in literature.
+Finally, we will discuss phases for which experimental thermochemical data is not available in literature.
 
 === Phases stable at 0 K with experimental thermochemical data
 Of the phases in @t_ox, only Fe12PbO19, In2(WO4)3, Mn2NiO4, Sc2Cu2O5, and Zr(WO4)2 have a positive reaction enthalpy from elementary oxide reactants $Delta H_298^"ox"$, while Lu3Fe5O12 is within the experimental error margins. @navrotsky2015ThermodynamicsSolid
 
-Considering that $Delta H_298^"ox"$ is also good proxy for enthalpy at 0 K within \~10meV/at, this indicates that all other phases in @t_ox (except Eu2CuO4, which falls under this error margin) are reasonably stable at 0 K with respect to their precursors. 
+Considering that $Delta H_298^"ox"$ is also good proxy for 0 K enthalpy within \~10meV/at, this indicates that all other phases in @t_ox (except Eu2CuO4, which falls under this error margin) are reasonably stable at 0 K with respect to their precursors. 
 To determine overall stability, one must also consider potential competing phases. 
 Considering the DFT-computed convex hulls at 0 K from @a_convex_hulls[Appendix], the following competing phases with lower energies than the target phase must be considered :
 
@@ -138,12 +143,12 @@ Both Gd3Fe5O12 and La2Pd2O5 have a negative reaction enthalpy, indicating stabil
     table.cell(colspan: 2,align:center)[Reaction],table.vline(),[$Delta H_298^r$],[$Delta S_298^r$], [$Delta G_"synth"^r$], [Ref.],
     [],[],[meV/at],[meV/(at K)],[meV/at],[],
     table.hline(),
-    [CeO2 + VO2],[-> CeVO4], [-1426.16], [], [], [ @navrotsky2015ThermodynamicsSolid @SGTE_LB],
-    [$1/7$ Eu4Al2O9 + $1/7$ Eu3Al5O12],[-> EuAlO3],[6.01],[0.0158],[\*-22.06],[ @wu1992CoupledThermodynamicphase],
-    [$1/5$ Eu3Fe5O12 + $1/5$ Eu2O3],[-> EuFeO3], [7.87],[0.0344],[\*-39.42],[@navrotsky2015ThermodynamicsSolid @SGTE_LB],
-    [3 GdFeO3 + Fe2O3], [-> Gd3Fe5O12], [-51.35],[],[],[@navrotsky2015ThermodynamicsSolid @SGTE_LB],
-    [$1/3$ La4PdO7 + $1/3$ La2Pd5O5], [-> La2Pd2O5], [\*-2.69],[],[-0.04],[  @jacob2002SystemLaPdO],
-    [3 LuFeO3 + Fe2O3], [-> Lu3Fe5O12], [25.59],[0.0297],[\*-18.13],[@kanke1998CalorimetricStudy],
+    [CeO2 + VO2],[-> CeVO4], [-122], [], [], [ @navrotsky2015ThermodynamicsSolid @SGTE_LB],
+    [$1/7$ Eu4Al2O9 + $1/7$ Eu3Al5O12],[-> EuAlO3],[6],[0.0158],[\*-22],[ @wu1992CoupledThermodynamicphase],
+    [$1/5$ Eu3Fe5O12 + $1/5$ Eu2O3],[-> EuFeO3], [8],[0.0344],[\*-39],[@navrotsky2015ThermodynamicsSolid @SGTE_LB],
+    [3 GdFeO3 + Fe2O3], [-> Gd3Fe5O12], [-51],[],[],[@navrotsky2015ThermodynamicsSolid @SGTE_LB],
+    [$1/3$ La4PdO7 + $1/3$ La2Pd5O5], [-> La2PdO4], [\*-2.69],[],[-0],[  @jacob2002SystemLaPdO],
+    [3 LuFeO3 + Fe2O3], [-> Lu3Fe5O12], [26],[0.0297],[\*-18],[@kanke1998CalorimetricStudy],
   ),
   caption:[Reaction energies of the reactions yielding the phases in @t_50mev_summary with respect to competing phases, using experimental data from literature. Values reported with \* are extrapolated outside the range specified in the associated referenece.],
 )
@@ -160,7 +165,7 @@ Aside from the fact that Eu2Ti2O7 is already reported to be stable from pure GGA
 <f_Eu2Ti2O7_hull_with_experimental>
 
 
-To summarize, the following 9 phases are stable presumed to be stable at 0 K, directly contradicting the data from the Materials Project @jain2013CommentaryMaterials : 
+To summarize, the following 9 phases are stable inferred to be stable at 0 K, directly contradicting the data from the Materials Project @jain2013CommentaryMaterials : 
 Al2CuO4, // no compete
 CeVO4, // competes with ox, data ok
 Eu2CuO4, // check that it's above error margins
@@ -190,7 +195,7 @@ With this information, we will therefore assume that In2(WO4)3 is stable at synt
 For Mn2NiO4, data for entropy of formation or Gibbs free was not found. 
 However, a thermodynamic assesment of the #lit[Mn-Ni-O] system from om Kjellqvist and Selleby#cite(<kjellqvist2010ThermodynamicAssessment>) does indicate stability of Mn2NiO4 in the 1000degC to 1200degC range.
 
-To summarize, the following 7 phases are unstable at 0 K but are entropically stabilized at synthesis conditions : EuAlO3, EuFeO3, Fe12PbO19, Mn2NiO4, Lu3Fe5O12, Sc2Cu2O5, and Zr(WO4)2.
+To summarize, the following 8 phases are unstable at 0 K but are entropically stabilized at synthesis conditions : EuAlO3, EuFeO3, Fe12PbO19, Mn2NiO4, Lu3Fe5O12, Sc2Cu2O5, Zr(WO4)2, and In2(WO4)3.
 
 === Phases lacking experimental thermochemical data in literature
 We now move on to the phases for which experimental thermochemical data could not be obtained in literature : 
@@ -244,7 +249,7 @@ From the data in @t_ox, experimental and DFT computed energies are compared in @
 )
 <f_dft_error>
 
-Exculding the errors intinsic to DFT and it's assumptions, we highlight the following related specifically to the materials project database @jain2013CommentaryMaterials and have caused inaccuracies in the following subsections.
+Excluding the errors intrinsic to DFT and its assumptions, we highlight the following related specifically to the materials project database @jain2013CommentaryMaterials and have caused inaccuracies in the following subsections.
 
 === Issues with Eu2O3 R2SCAN computation
 The R2SCAN computation of Eu2O3 seems to cause errors.  This can be seen both in @f_dft_error and the @a_convex_hulls[Appendix], where GGA data yields much more reasonable results. The fact that there seems to be a linear shift in @f_dft_error which is present in all oxides containing Eu, both with the mixed and pure R2SCAN data, suggests that the error is related to Eu2O3 rather than the ternary oxides or the pseudopotential.
@@ -274,13 +279,43 @@ Of the 5 cases in which experimental data indicates that the phase is entropical
 
 // - Lower energy polymorphs / (partial inversion).
 
+== Extension to >20 meV/atom above the hull
+
+We now extend the previous analysis to phases within the same dataset which yield a phase predicted to be between 20 meV/atom and 50 meV/atom above the hull, once again excluding any reactions involving gases, which includes 46 phases.
+
+Of these 46 phases, 3 contain a hypothetical polymorph in the Materials Project@jain2013CommentaryMaterials predicted to be on the hull (Al2NiO4, LiFeO2, and Al2CoO4), and 1 phase contains Eu (Eu2Ir2O7).
+Based on the discussion in @s_dft_err exclude these 4 phases from the analysis, leaving us with 42 phases to consider.
+
+Of these phases, experimental thermochemical data could be easily found for 14 of these phases and their decomposition products, following the procedure outlined in @s_methods_exp_thermo until the third step and only considering sources readily available online.
+Reaction energies for the formation of these phases from the decomposition products predicted by the Materials Project are shown in @t_extra_20meV.
+
+Of these 14 phases, 11 have a negative reaction enthalpy from their predicted decomposition products, indicating that they are stable at 0 K and thus linked to inherent error in the DFT computation, while 2 are entropically stabilized (AlFeO3 and TiFe2O5).
+No entropy or Gibbs free energy data could be found for the remaining phase, ZrPbO3, however the associated experimental error has an estimated uncertainty of 9 meV/atom@rane2001EnthalpiesFormation, meaning that the positive reaction energy reported cannot be used to conclude that the phase is unstable at 0 K.
+
+Once again, no phases were found to be metastable at synthesis conditions.
+
+#let data = csv("table/gasless_20meV_nice.csv")
+
+
+#figure(
+  table(columns:(42%,15%,8%,8%,8%,8%,8%,4%),align:(right,left,right,right,right,right,right,right),
+  table.cell(colspan: 2,align:center)[Reaction],table.vline(),[$T_"synth"$],[$Delta H_298^r$],[$Delta S_298^r$],[$Delta G_298^r$],[$Delta G_"synth"^r$],[Ref.],
+    [],[],[K],[$"meV"/"atom"$],[$"meV"/"at. K"$],[$"meV"/"atom"$],[$"meV"/"atom"$],[],
+    table.hline(start: 0,stroke:0.4pt),
+  ..data.map(row => row.map(cellify)).flatten(),),
+  caption:[Experimental reaction energies from predicted decomposition products of phases predicted to be between 20 meV/atom and 50 meV/atom in the dataset by #textcite(<kononova2019TextminedDataset>).]
+)
+<t_extra_20meV>
+
 == Conclusions
 
 No phases metastable at synthesis conditions were identified. 
-It is however likely that, if such a case were to exist, it may be a phase who lies less than 50 meV/atom above the hull.
-Nevertheless, our findings for phases predicted to be 50 meV/atom above the hull suggest that at least the vast majority of these phases predicted to be metastable are actually stable at synthesis conditions.
-Furthermore, we find a 50/50 split between phases which are actually stable at low temperatures and thus where the predicted instability is due to computational errors, and phases which are entropically stabilized at synthesis conditions.
-By considering hypothetical phases, excluding the values obtained using the Eu2O3 R2SCAN computation, and considering the estimator from #textcite(<bartel2018PhysicalDescriptor>) to evaluate stability at synthesis conditions, 8/22 phases are predicted to be stable, greatly improving the accuracy of results.
+It is however likely that, if such a case were to exist, it may be a phase who lies less than 20 meV/atom above the hull.
+It is also possible that thermochemical data for metastable phases, which may be more difficult to synthesize, is not as prevalent in literature, biasing results towards stable phases.
+Nevertheless, our findings suggest that at least the vast majority of these phases predicted to be metastable are actually stable at synthesis conditions.
+Furthermore, we find a roughly equal split between phases which are actually stable at low temperatures and thus where the predicted instability is due to computational errors, and phases which are entropically stabilized at synthesis conditions.
+
+By considering hypothetical phases, excluding the values obtained using the Eu2O3 R2SCAN computation, and considering the estimator from #textcite(<bartel2018PhysicalDescriptor>) to evaluate stability at synthesis conditions, 8/22 phases initially predicted to be >50 meV/atom above the hull are predicted to be stable, greatly improving the accuracy of results.
 To conclude, we also note that discarding all phases predicted to be metastable discards a large number of synthesizable candidates (20% of oxide-to-oxide reactions in the text-mined dataset of #textcite(<kononova2019TextminedDataset>)), and that a cutoff of 20 meV/atom still leaves out almost 10% of synthesized phases.
 
 

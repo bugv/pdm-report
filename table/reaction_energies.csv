@@ -2,16 +2,16 @@ Al2CuO4,-170.7,0.0089,-173.4,-171.8, @SGTE_LB,62.9,† 62.9,37.8,† 36.7
 CeVO4,-345.1,,,, @navrotsky2015ThermodynamicsSolid,-242.5,-242.5,-280.6,-278.3
 Eu2CuO4,*-7.9,,*-5.2,-17.3, @kisiel2004PhaseRelations ,17.2,† 212.3,-19.2,† 159.2
 Eu2Ti2O7,*-99.9,,,, @helean2004FormationEnthalpies,-57.4,† 70.3,-73.8,† 42.2
-EuAlO3,-63.3,0.0260,,*-107.6, @navrotsky2015ThermodynamicsSolid,-25.1,111.5,-19.0,90.0
-EuFeO3,-91.0,0.0227,-96.0,*-102.3, @navrotsky2015ThermodynamicsSolid,12.8,149.4,-22.8,97.4
+EuAlO3,-63.3,0.026,,*-107.6, @navrotsky2015ThermodynamicsSolid,-25.1,111.5,-19,90
+EuFeO3,-91,0.0227,-96,*-102.3, @navrotsky2015ThermodynamicsSolid,12.8,149.4,-22.8,97.4
 Fe12PbO19,*13.1,,9.2,-2.9, @diop2010ExperimentalInvestigations,58.7,58.7,9.7,7.8
 Fe2NiO4,-32.3,0.0007,-32.5,*-.33.1, @SGTE_LB,90.7,90.9,51.2,50.5
 Gd2Zr2O7,-49.2,,,, @navrotsky2015ThermodynamicsSolid,272.8,272.8,184.5,176.7
 Gd3Fe5O12,-119.7,,,, @navrotsky2015ThermodynamicsSolid,,,,
-In2(WO4)3,27.1,0.0439,14.0,*-28.8, @steiner2014ThermochemistryChemical,55.9,55.9,-58.2,-66.6
+In2(WO4)3,27.1,0.0439,14,*-28.8, @steiner2014ThermochemistryChemical,55.9,55.9,-58.2,-66.6
 La2Hf2O7,-143.2,,,, @bajenova2023ExperimentalDetermination,,,,
 La2PdO4,*-62.2,,*-61.2,-58.5, @jacob2002SystemLaPdO,10.3,11.6,-48.7,-53.4
 Lu3Fe5O12,-4.3,0.0417,,*-65.7, @kanke1998CalorimetricStudy,60.3,60.3,-10.9,-15.4
-Mn2NiO4,3.0,,,, @navrotsky1968ThermodynamicsFormation,342.1,342.1,304.6,304.6
+Mn2NiO4,3,,,, @navrotsky1968ThermodynamicsFormation,342.1,342.1,304.6,304.6
 Sc2Cu2O5,*1.0,,*0.7,-0.1, @kopyto1996GibbsFree,61.3,61.3,29.8,27.5
-Zr(WO4)2,26.4,,,-16.0, @reznitskii2002EnthalpiesFormation,59.6,59.6,-36.0,-45.6
+Zr(WO4)2,26.4,,,-16, @reznitskii2002EnthalpiesFormation,59.6,59.6,-36,-45.6

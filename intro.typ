@@ -19,7 +19,7 @@ This makes the synthesis of metastable materials an ideal platform to study the 
 In addition to the fact that metastable phases expand the possible design space of materials and are technologically relevant in many applications including photocatalysts, photovoltaics, ionic conductors, steels, and more. @sun2016ThermodynamicScale
 
 From a computational materials discovery perspective, the question of phases predicted to be metastable by ground state DFT is also of interest. 
-Indeed, for such a phase three cases can be considered : 
+Indeed, for such a phase four cases can be considered : 
 
 1. The phase is experimentally accessible and is stable in the ground state; the DFT prediction is inaccurate. 
 2. The phase is experimentally accessible and metastable at 0 K, but is entropically stabilized at synthesis conditions. 

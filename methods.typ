@@ -4,9 +4,9 @@
 Samples are prepared in the A-lab at LBL @szymanski2023AutonomousLaboratory. 
 Precursor powders (Sigma-Aldrich, >99% purity) are mixed via centrifuge in ethanol and subsequently dried before solid state synthesis.
 
-In situ XRD is preformed in an Anton Paar - HTK 1200N diffractometer using Cu K$alpha$ radiaton. 
+In situ XRD is performed in an Anton Paar XRDynamic 500 diffractometer using Cu K$alpha$ radiation with an Anton Paar HTK 1200N heating chamber. 
 Scans are taken from 7º to 70º during heating with a scan rate of 5 minutes/scan, with rapid heating in between.
-Riedvelt refinment and phase identification are done using DARA @fei2026DaraAutomated, which was further extended into `dara-insitu` by the Ceder group at LBL for #lit[in-situ] experiments (manuscript in preparation).
+Rietveld refinement and phase identification are done using DARA @fei2026DaraAutomated, which was further extended into `dara-insitu` by the Ceder group at LBL for #lit[in-situ] experiments (manuscript in preparation).
 Phases were selected from the international crystal structure database (ICSD) @zagorac2019RecentDevelopments, the Crystallography Open Database (COD) @grazulis2009CrystallographyOpen, and the Materials Project @jain2013CommentaryMaterials.
 
 
@@ -22,10 +22,11 @@ Phases were selected from the international crystal structure database (ICSD) @z
 == Databases and computational methods
 
 === Experimental thermochemical databases
+<s_methods_exp_thermo>
 
 The workflow used for obtaining experimental reaction energies from elementary oxides in literature is the following, using the first available datapoint in this list
-1. #textcite(<barin2008ThermochemicalData>) and #textcite(<SGTE_LB>) databases are used if the phase of interest is available. Note that the SGTE's data is the standard for thermochemical data and is used in  commercial software (ThermoCalc @GeneralAlloys, FactSage @FactSageFAQ), and can thus be considered to be reliable. The data used in this thesis comes from a 1999 physical publication, and is therefore not completely up to date. 
-  These record formation energies from elementary consituents in their reference state, which are then converted into reaction energies by considering the elementary oxide formation energies contained in the same datasets.  For both databases, the data is digitalized using LBL's in-house OCR AI model, based on Gemma 31B. @team2026Gemma4 For values reported in tables in this thesis, accuracy of this digitalization was checked manually and no mistakes were found. 
+1. #textcite(<barin2008ThermochemicalData>) and #textcite(<SGTE_LB>) databases are used if the phase of interest is available. Note that the SGTE's data is the standard for thermochemical data and is used in  commercial software (ThermoCalc @GeneralAlloys, FactSage @FactSageFAQ). The data used in this thesis comes from a 1999 printed publication, and is therefore not completely up to date. 
+  These record formation energies from elementary constituents in their reference state, which are then converted into reaction energies by considering the elementary oxide formation energies contained in the same datasets.  For both databases, the data is digitized using LBL's in-house OCR AI model, based on Gemma 31B. @team2026Gemma4 For values reported in tables in this thesis, accuracy of this digitalization was checked manually and no mistakes were found. 
 2. For the specific case of rare earth oxides, #textcite(<navrotsky2015ThermodynamicsSolid>) is used, once again providing elementary formation energies. To compute reaction energies, the formation energy of the elementary rare earth oxide is taken from the same source, while for other elementary oxides the SGTE database is used. //This dataset reports uncertainty in formation energies. When converting to oxide to oxide reaction energies, only the error in the product is considered, and reported errors in reactants are not propagated. Indeed, in the vast majority of cases, the formation energies are computed from the elementary oxide reactions, and therefore propagating the error would lead to double counting. 
   // #footnote[We also note that there seems to be some errors, in particular the zirconate formation energies are wrongly converted from the oxide to oxide reaction energies. TODO add appendix // wrong. For example, the formation energy of Gd2Zr2O7 (#textcite(<helean2000EnthalpiesFormation>) report $Delta H_f^"el" = -4072.9 "kJ/mol"$ and $Delta H_f^"ox" = -52.2 "kJ/mol"$ while #textcite(<navrotsky2015ThermodynamicsSolid>) report -2402.8 kJ/mol). The reference of #textcite(<navrotsky2015ThermodynamicsSolid>) is #textcite(<navrotsky2005ThermodynamicsOxide>) and reports $Delta H_f^("ox") = -57 "kJ/mol"$, which converts to  TODO blablabla zirconates are all messed up.
   //]

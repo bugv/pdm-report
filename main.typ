@@ -12,17 +12,35 @@
 #pagebreak()
 
 #counter(page).update(1)
-// #heading("Abstract",numbering: none)
-// #heading("Acknowledgements",numbering:none)
+
+
+#heading("Abstract",numbering: none)
+
+Solid-state synthesis is a widely used route for the preparation of inorganic materials, but its potential for synthesizing phases metastable at synthesis conditionsremains poorly understood, with limited reports in literature. 
+More broadly, the impact of nucleation in phase selectivity and reaction pathways in solid state synthesis is unclear, and the synthesis of metastable phases is an ideal platform to study its impact.
+
+First, the experimental accessibility of phases predicted from denstiy functional theory (DFT) to be metastable with respect to decomposition at 0 K is investigated using a text-mined dataset of ternary oxides from literature.
+Of 34 phases studied for which stability at synthesis conditions could be asserted, no phase was found to be metastable at synthesis conditions.
+20 of these phase are experimentally stable at 0 K, indicating errors in the DFT calucations, while 10 are entropically stabilized at synthesis conditions, and the remaining 4 cannot not be classified.
+These results confirm the low prevalence of metastable phases in traditional solid state synthesis.
+
+The possibility of accessing phases that are genuinely metastable at synthesis conditions is then investigated through in-situ X-ray diffraction. 
+Metastable polymorphs are observed during the solid-state synthesis of CuMoO4, CrVO4, and Ta2CuO6.
+In all three systems, the metastable and stable polymorphs nucleate concurrently, indicating that nucleation enables the formation of the metastable phase despite the thermodynamic preference for the stable polymorph.
+Concurrent growth and limited phase fractions (max. 5%) of the polymorph demonstrates that while nucleation may affect phase selectivity, its impact on the full reaction pathway remains limited.
+
+Together, these results show that genuinely metastable phases are rarely observed in conventional solid-state synthesis products, but can nevertheless be accessed transiently through kinetic phase selection, influencing our understanding of solid-state reaction pathways.
+
+#heading("Acknowledgements",numbering: none)
 // thank ZKS & Haenny. Do not thank Haenny in the version for ZKS.
-// 
 
+I would first like to thank my supervisors, Prof. Anirudh Natarajan, Prof. Gerbrand Ceder, and Dr. Andrea Guinto, for giving me the opportunity to work on this project and for their guidance throughout my thesis. 
 
+I would also like to thank Ceder group members their help, discussions, and the many useful conversations throughout this work, in particular Tudor, Jun, and Lauren in the A-lab team at the A-Lab and Sydney, Maciej, Hadley, Tucker, and Shilong in the lab uphill.
 
-// #heading("Acknowledgements",numbering: none)
+Finally, I would like to thank the Zeno Karl Schindler Foundation for their financial support for this thesis, and the Rodolphe and Renée Haenny Foundation for their support throughout my masters at EPFL.
 
-
-// #pagebreak()
+#pagebreak()
 
 
 #outline(depth:2)
@@ -62,11 +80,21 @@
 #pagebreak()
 = Conclusion
 
-Solid state synthesis, the main workhorse for inorganic materials synthesis, has historically not been considered as a viable platform for the synthesis of metastable materials, particularly in cases where nucleation plays an important role in phase selectivity. 
-Indeed, by considering phases computationally predicted to be metastable, we find that the vast majority of these phases are actually stable at synthesis conditions, either due to computational errors or entropic stabilization.
+// Solid state synthesis, the main workhorse for inorganic materials synthesis, has historically not been considered as a viable platform for the synthesis of metastable materials, particularly in cases where nucleation plays an important role in phase selectivity. 
+// Indeed, by considering phases computationally predicted to be metastable, we find that the vast majority of these phases are actually stable at synthesis conditions, either due to computational errors or entropic stabilization.
 
-However, following #textcite(<zeng2024SelectiveFormation>), which sucessfully synthesize a single phase pure metastable polymorph of LiTiOPO4 through nucleation selectivit, we observe through in-situ XRD small amounts of metastable polymorphs in three different solid state reaction systems.
-Even though the absolute amount of sucessful reactions is small, our high sucess rate (3/7 reactions) in extremely simple binary to ternary oxide reactions indicates that solid state synthesis is a viable platform for so-called panoramic synthesis@haynes2017PanoramicSynthesis of metastable phases, and that nucleation has an impact on phase selectivity and the reaction pathway.
+// However, following #textcite(<zeng2024SelectiveFormation>), which successfully synthesize a single phase pure metastable polymorph of LiTiOPO4 through nucleation selectivity, we observe through in-situ XRD small amounts of metastable polymorphs in three different solid state reaction systems.
+// Even though the absolute amount of successful reactions is small, the large prevalence of metastable polymorphs in the early stages of reaction progress (3/7 reactions) in extremely simple binary to ternary oxide reactions indicates that solid state synthesis is a viable platform for so-called panoramic synthesis@haynes2017PanoramicSynthesis of metastable phases, and that nucleation has an impact on phase selectivity and the reaction pathway.
+
+Solid-state synthesis, the main workhorse for inorganic materials synthesis, has historically not been considered a viable platform for the synthesis of metastable materials, particularly where nucleation may influence phase selectivity. 
+
+By examining 34 phases predicted to be metastable at 0 K and for which stability at synthesis conditions could be assessed, no phase was found to be metastable at synthesis conditions. Twenty phases are experimentally stable at 0 K, indicating inaccuracies in the DFT predictions, while ten are entropically stabilized at synthesis conditions; the remaining four could not be conclusively classified. These results indicate that genuinely metastable phases are rare among the solid-state synthesis reactions considered.
+
+We then investigate whether phases that are genuinely metastable at synthesis conditions can nevertheless be accessed through kinetic phase selection. Using in-situ XRD, metastable polymorphs are observed during the synthesis of CuMoO4, CrVO4, and Ta2CuO6. In all three systems, the metastable polymorph begins forming concurrently with the stable polymorph, despite the thermodynamic preference for the latter. The metastable phases remain at small phase fractions before transforming into the stable polymorph, indicating that nucleation contributes to phase selectivity while having a limited impact on the overall reaction pathway.
+
+Although metastable polymorphs were observed in only three reactions, their occurrence in 3 of 7 solid-state reactions studied demonstrates that transient metastable phases can arise relatively frequently during the early stages of simple binary-to-ternary oxide reactions. These observations suggest that solid-state synthesis may provide a viable platform for the panoramic synthesis of metastable phases and highlight the need to consider kinetic phase selection, in addition to thermodynamic stability, when designing solid-state synthesis pathways.
+
+Finally, based on these observations, we propose a hypothesis for the conditions favoring nucleation-selective synthesis of metastable phases. In particular, a sufficiently low reaction-onset temperature relative to the metastable-to-stable polymorphic transformation temperature should provide a larger temperature window in which the metastable phase can nucleate and grow before transforming. This suggests that precursor selection and reaction pathways that decouple reaction onset from polymorphic transformation may enable the formation of larger fractions of metastable products. Ball milling and other approaches to enhance precursor activation and diffusion may help achieve this goal by lowering the onset temperature. These hypotheses provide directions for future work aimed at extending nucleation-selective synthesis to new systems and increasing the yield of metastable phases.
 
 #pagebreak()
 
@@ -205,3 +233,4 @@ Even though the absolute amount of sucessful reactions is small, our high sucess
 
 === NiMoO4
 #image("fig/META3_12_1MoO3_1NiO_XRD3_740C_quad_analysis_finalized.png", width: 100%)
+
