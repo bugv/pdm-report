@@ -94,11 +94,10 @@ Nucleation is not typically considered in the modeling of reaction rates on onse
 
 Based on classical nucleation theory, #textcite(<zeng2024SelectiveFormation>) show that the metastable polymorph t-LiTiOPO4, which has a lower nucleation barrier than the stable polymorph o-LiTiOPO4, can be synthesized via solid state synthesis.
 
-Solid state synthesis of low phase fractions of metastable materials has also been reported for B2SiO5 and B2GeO5, both metastable with respect to decomposition but obtained transiently (maximum concentration of 10%) during the synthesis of other compounds. @zhereb2003MetastableStates
+Solid state synthesis of low phase fractions of metastable materials has also been reported for Bi2SiO5 and Bi2GeO5, both metastable with respect to decomposition but obtained transiently (maximum concentration of 10%) during the synthesis of other compounds. @zhereb2003MetastableStates
 
 
-These are the only report that we have found which definitely show that nucleation can have an impact on a solid state synthesis reaction synthesis pathway and form metastable polymorphs.
-
+These are the only report that we have found which definitely show that nucleation can have an impact on a solid state synthesis reaction synthesis pathway and form metastable polymorphs (note that reports of topochemical routes, which are detailed in the next section, are not considered here as they do not involve nucleation).
 
 #textcite(<todd2019YttriumManganese>) similarly show selective formation of h-YMnO3 and o-YMnO3 polymorphs in solid state metathesis (double ion exchange).
 While o-YMnO3 is sometimes reported to be metastable, @todd2019SelectiveFormation the authors do not make this claim and suggest that the polymorphism may be purely thermodynamic.
