@@ -2,7 +2,7 @@
 
 Computational methods have the potential to greatly accelerate materials discover, algoritms now being able to propose a large amount of novel crystal structures and evaluate stability metrics. @merchant2023ScalingDeep
 However, whether a proposed phase is actually experimentally accessible is not trivial to determine computationally.
-To evaluate the synthesizability of the large volume of proposed structures and the time-consuming nature of experimental synthesis, autonomous laboratories, which can attempt different synthesis recipes at a large scale, have been developed, including the A-lab at LBNL for inorganic solid state synthesis. @szymanski2023AutonomousLaboratory,
+To evaluate the synthesizability of the large volume of proposed structures and the time-consuming nature of experimental synthesis, autonomous laboratories, which can attempt different synthesis recipes at a large scale, have been developed, including the A-lab at LBNL for inorganic solid state synthesis. @szymanski2023AutonomousLaboratory
 For the case of inorganic synthesis, solid state synthesis, i.e. the synthesis of materials through reactions between solid precursor powders at elevated temperatures, is, thanks to its relative simplicity, prevalence, and industry use, is a natural candidate for automated synthesis and is thus platform A-lab is built on.
 
 For long, solid state synthesis was mostly exploratory, with new phases discovered from precursors "the old fashioned way (by accident)," as #textcite(<stein1993TurningHeat>) describes. 

@@ -12,10 +12,12 @@ Excluding a purely thermodynamic selectivity, in which the temperature is high e
   - _Diffusion (or growth) selectivity_ : local equilibrium is reached, so all phases are on the hull, but some are out of global equilibrium. The limiting process is diffusion of species towards the reaction interface, and therefore growth is kinetically limiting. In this regime, metastable phases are inaccessible.
   - _Nucleation selectivity_ : phase formation is dictated by the phase with the lowest nucleation barrier, regardless of other thermodynamic considerations. Kinetically, nucleation is limiting, and the formation of metastable phases is possible if the associated barrier is lower than the stable phase.
 
+For the following, we will only consider phase transformations including nucleation and will not consider topochemical routes.
+
+
 Note that this classification is also valid for the soft chemistry routes described in @s_sota_soft. 
 In particular, the techniques where diffusion is bypassed typically enter the nucleation selectivity regime, including hydrothermal and sol-gel synthesis.
 
-For the following, we will only consider phase transformations including nucleation and will not consider topochemical routes.
 
 Since diffusion is typically the kinetically limiting step in solid state synthesis, this led to a long held belief that nucleation selectivity is not possible (or at least prevalent), limiting its use to the synthesis of stable products, as opposed to soft chemistry routes where synthesis of metastable phases is prevalent. @stein1993TurningHeat
 However, this is inconsistent with the recent discoveries of metastable phases in solid state synthesis by #textcite(<zeng2024SelectiveFormation>).
@@ -144,10 +146,10 @@ A now experiment using previously calcinated La2O3 would avoid this issue and ca
 === Metastable CuMoO4 polymorph synthesis
 
 The CuMoO4 reaction is shown in @f_META3_10_CuMoO4.
-A peak clearly appears between 390degC and 460degC, and must therefore be associated to an intermediate phase.
+A peak clearly appears at 24.1º between 390degC and 460degC, and must therefore be associated to an intermediate phase.
 This peak corresponds to the main peak in the diffraction pattern of epsilon-CuMoO4 (space group 14, $P 2_1  \/ n$), which was synthesized by #textcite(<baek2008NewMagnetically>) through a hydrothermal route.
 Other major peaks overlap with MoO3 and the stable polymorph alpha-CuMoO4 (triclinic, space group 2, $P overline(1)$).
-However, a peak at 31º (50% of the main peak intensity from the crystal structure) is not observed, meaning that the observed phase may be a modification of epsilon-CuMoO4 or another phase altogether.
+However, a peak at 31º, expected from the epsilon-CuMoO4 crystal structure at 50% of the main peak intensity from the crystal structure, is not observed, meaning that the observed phase may be a modification of the crystal structure or another phase altogether.
 This discrepancy causes the Rietveld refinement to be underfit the peak and therefore underestimates the phase fraction and results in a slight increase in the residual $R_(w p)$.
 A search in the ICSD, COD, and Materials Project databases for phases in the #lit[Cu-Mo-O] system did not yield any other candidate phases.
 We can also rule out creation of Cu3Mo2O9 as it appears later with distinct peaks.
@@ -163,7 +165,7 @@ We note that, assuming this is a CuMoO4 polymorph and not another off-equilibriu
 
 The CrVO4 reaction pathway is shown in @f_META3_16_CrVO4.
 Both the stable CrVO4 #lit[-I]I polymorph (orthorhombic, space group 63) and the metastable CrVO4 #lit[-I] polymorph (monoclinic, space group 12)
-CrVO4 #lit[-I] was first synthesized by #textcite(<touboul1995SynthesisChimie>) using a soft chemistry route, with a CrVO4#lit[-I] to CrVO4 #lit[-I]I transformation observed at 660degC, which is consistent with the complete disappearance of CrVO4 #lit[-I] we observe at 650degC.
+CrVO4 #lit[-I] was first synthesized by #textcite(<touboul1995SynthesisChimie>) using a soft chemistry route involving precursor dehydration and subsequent recrystallization, with a CrVO4 #lit[-I] to CrVO4 #lit[-I]I transformation observed at 660degC, which is consistent with the complete disappearance of CrVO4 #lit[-I] we observe at 650degC.
 Furthermore, calorimetry data indicates the CrVO4 #lit[-I] to CrVO4 #lit[-I]I transformation is exothermic, indicating CrVO4 #lit[-I] metastability, both at 0 K and synthesis conditions. @touboul1995SynthesisChimie.
 // correct II to III
 // Once again, simultaneous onset of both polymorphs is observed, meaning that at least one must be metastable at synthesis conditions.
@@ -194,7 +196,7 @@ The low observed phase fractions can be explained by two factors :
 + The metastable phase forms close to the temperature at which it transforms to the stable polymorph, meaning that the temperature window in which it can be observed is small. Furthermore, the transformation occurs before there is even a significant fraction of the metastable polymorph.
 + The metastable phases do not form alone, i.e. the process is not fully selective. This can be explained by small differences in nucleation barriers but can also be tuned via the reaction energy. Indeed, #textcite(<zeng2024SelectiveFormation>) shows that, as the nucleation barrier difference and thus the ratio in reaction rates between the metastable and stable polymorphs increases with increasing reaction energy, the metastable polymorph can be formed in larger phase fractions by tuning the precursors. They observe phase pure formation of the metastable polymorph only in cases with large reaction energies, which is not the case with our reactions. In addition, achieving large reaction energies usually involves using less stable precursors which therefore have lower melting points, and, thus, through a Tammann's rule argument, will lower synthesis temperatures, increasing the window for the polymorph to grow without transforming.
 
-Given the lack of holds long enough at metastable phase saturation, we also note that whether concurrent nucleation of the stable and metastable phase occurs, or whether the metastable phase nucleates first and subsequently transforms to the stable polymorph.
+Given the lack of holds long enough at metastable phase saturation, we also note that we cannot fully determine whether concurrent nucleation of the stable and metastable phase occurs, or whether the metastable phase nucleates first and subsequently transforms to the stable polymorph.
 
 == Validity of Tammann's rule
 
@@ -213,12 +215,13 @@ We will note, however, this this observation is based on a very small dataset an
 <s_hypo>
 
 The main concern for solid state synthesis of metastable phases is that the higher temperatures required for fast diffusion will be higher than the transformation temperature of the metastable phase to the stable polymorph, meaning that the metastable phase will not be observed.
-In this chapter, we attempt to bypass this by considering reaction with a low melting point precursor, which, following Tammann's rule, should result in a lower reaction temperature.
+In this chapter, we attempt to bypass this by considering reactions with a low melting point precursor, which, following Tammann's rule, should result in a lower reaction temperature.
 However, considering that the polymorphic transformation temperature, which is also broadly related to atomic mobility, may also be scaled, the benefits to this approach may be low.
 Furthermore, #textcite(<tan2026OriginReaction>), which we did not consider in our candidate selection, shows that the reaction onset may be better described by metastable eutectics, which requires other considerations. 
 
 To obtain larger phase fractions of metastable product, we should consider cases where the polymorphic transformation temperature is even more elevated than the reaction onset. 
 Indeed, in these cases, the metastable phase will have a larger window to grow before transforming to the stable polymorph.
+On the flip side, it is possible that, for precursors with activation at high temperatures, nucleation only occurs above the polymorphic transformation temperature, meaning that the metastable phase cannot be observed at sizes larger than its nanoscale stabilization.
 Inspired by Tammann's rule, we can use the melting point of the target phase as a heuristic for the polymorphic transformation temperature, and using the approach from #textcite(<tan2026OriginReaction>)
 
 This hypothesis is summarized in @f_hypo_drawing.
@@ -246,6 +249,6 @@ In practice, we can use this approach to attempt to identify, based on phase dia
 <f_cute_phase_diagrams>
 
 To test these hypotheses and build up on our results, the following approaches can be taken to synthesis metastable phases in larger phase fractions and in new systems : 
-- New systems can be considered, for which the phase diagram follows the ideal behavior described above.
-- Ball milling of precursors, which can decrease reaction onset and enhance diffusion, increasing the window for growth before the polymorphic transformation.
+- New systems can be considered, for which the phase diagram follows the behaviors described above.
+- Ball milling of precursors can decrease reaction onset and enhance diffusion, increasing the window for growth before the polymorphic transformation.
 - Building up on the knowledge of #textcite(<zeng2024SelectiveFormation>), solid state metathesis reactions for which reaction energies are higher can be considered. This could result in a higher nucleation rate difference and thus a more selective formation of the metastable polymorph.

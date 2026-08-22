@@ -1,7 +1,7 @@
-     WO3 , 1745 , CuO , 1719 , CuWO4 , 1274 , 840 , 910 , 920 , 1205 , No , @CRC2016   
+     WO3 , 1745 , CuO , 1719 , CuWO4 , 1274 , 840 , 910 , 920 , 1205 , No , @CRC2016 @koltsova1999ChemInformAbstract 
      Ta2O5 , 2057 , CuO , 1719 , CuTa2O6 ,  , 980 , 1020 , 1270 ,  , Yes , @CRC2016 
-     MoO3 , 1074 , CuO , 1719 , CuMoO4 , 1150 , 640 , 750 , 830 , 980 , Yes , @CRC2016   
-     MoO3 , 1074 , NiO , 2228 , NiMoO4 , *1590 , 830 , 930 , 970 , 1040 , No , @CRC2016   
+     MoO3 , 1074 , CuO , 1719 , CuMoO4 , 1150 , 640 , 750 , 830 , 980 , Yes , @CRC2016 @reichelt2000MischkristallbildungIm
+     MoO3 , 1074 , NiO , 2228 , NiMoO4 , *1590 , 830 , 930 , 970 , 1040 , No , @CRC2016 @yanushkevich2024PhaseDiagram
      V2O5 , 943 , La2O3 , 2577 , LaVO4 ,  ,  , 890 , 910 ,  , No* , @CRC2016 
-     V2O5 , 943 , Cr2O3 , 2602 , CrVO4 , *1175 , 900 , 920 ,  , 940 , Yes , @CRC2016   
-     V2O5 , 943 , Fe2O3 , 1838 , FeVO4 , *1140 , 780 , 870 ,  , 930 , No* , @CRC2016   
+     V2O5 , 943 , Cr2O3 , 2602 , CrVO4 , *1175 , 900 , 920 ,  , 940 , Yes , @CRC2016 @walczak1989PhaseEquilibria
+     V2O5 , 943 , Fe2O3 , 1838 , FeVO4 , *1140 , 780 , 870 ,  , 930 , No* , @CRC2016 @malan2018PhaseEquilibria

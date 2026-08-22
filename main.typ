@@ -16,18 +16,18 @@
 
 #heading("Abstract",numbering: none)
 
-Solid-state synthesis is a widely used route for the preparation of inorganic materials, but its potential for synthesizing phases metastable at synthesis conditionsremains poorly understood, with limited reports in literature. 
-More broadly, the impact of nucleation in phase selectivity and reaction pathways in solid state synthesis is unclear, and the synthesis of metastable phases is an ideal platform to study its impact.
+Solid-state synthesis is a widely used route for the preparation of inorganic materials, but its use for synthesizing metastable phases via nucleation-related kinetic control remains poorly understood, with limited reports in literature. 
+More broadly, the impact of nucleation in phase selectivity and reaction pathways in solid state synthesis is unclear, and the synthesis of metastable phases is an ideal platform to study this in more detail.
 
-First, the experimental accessibility of phases predicted from denstiy functional theory (DFT) to be metastable with respect to decomposition at 0 K is investigated using a text-mined dataset of ternary oxides from literature.
+First, the experimental accessibility of phases predicted from density functional theory (DFT) to be metastable with respect to decomposition at 0 K is investigated using a text-mined dataset of ternary oxides from literature.
 Of 34 phases studied for which stability at synthesis conditions could be asserted, no phase was found to be metastable at synthesis conditions.
-20 of these phase are experimentally stable at 0 K, indicating errors in the DFT calucations, while 10 are entropically stabilized at synthesis conditions, and the remaining 4 cannot not be classified.
+20 of these phases are experimentally stable at 0 K, indicating errors in the DFT calculations, while 10 are entropically stabilized at synthesis conditions and the remaining 4 cannot be classified.
 These results confirm the low prevalence of metastable phases in traditional solid state synthesis.
 
-The possibility of accessing phases that are genuinely metastable at synthesis conditions is then investigated through in-situ X-ray diffraction. 
+The possibility of accessing phases that are genuinely metastable at synthesis conditions is then investigated through in-situ #lit[X-ray] diffraction. 
 Metastable polymorphs are observed during the solid-state synthesis of CuMoO4, CrVO4, and Ta2CuO6.
-In all three systems, the metastable and stable polymorphs nucleate concurrently, indicating that nucleation enables the formation of the metastable phase despite the thermodynamic preference for the stable polymorph.
-Concurrent growth and limited phase fractions (max. 5%) of the polymorph demonstrates that while nucleation may affect phase selectivity, its impact on the full reaction pathway remains limited.
+In all three systems, the metastable and stable polymorphs appear concurrently, indicating that nucleation enables the formation of the metastable phase despite the thermodynamic preference for the stable polymorph.
+Concurrent growth and limited phase fractions (maximum 5%) of the polymorph demonstrates that while nucleation may affect phase selectivity, its impact on the full reaction pathway remains limited.
 
 Together, these results show that genuinely metastable phases are rarely observed in conventional solid-state synthesis products, but can nevertheless be accessed transiently through kinetic phase selection, influencing our understanding of solid-state reaction pathways.
 
@@ -36,7 +36,7 @@ Together, these results show that genuinely metastable phases are rarely observe
 
 I would first like to thank my supervisors, Prof. Anirudh Natarajan, Prof. Gerbrand Ceder, and Dr. Andrea Guinto, for giving me the opportunity to work on this project and for their guidance throughout my thesis. 
 
-I would also like to thank Ceder group members their help, discussions, and the many useful conversations throughout this work, in particular Tudor, Jun, and Lauren in the A-lab team at the A-Lab and Sydney, Maciej, Hadley, Tucker, and Shilong in the lab uphill.
+I would also like to thank the Ceder group members their help, discussions, and the many useful conversations throughout this work, in particular Tudor, Jun, and Lauren in the A-lab team at the A-Lab and Sydney, Maciej, Hadley, Tucker, and Shilong in the lab uphill.
 
 Finally, I would like to thank the Zeno Karl Schindler Foundation for their financial support for this thesis, and the Rodolphe and Renée Haenny Foundation for their support throughout my masters at EPFL.
 

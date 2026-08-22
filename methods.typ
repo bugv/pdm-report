@@ -5,6 +5,7 @@ Samples are prepared in the A-lab at LBL @szymanski2023AutonomousLaboratory.
 Precursor powders (Sigma-Aldrich, >99% purity) are mixed via centrifuge in ethanol and subsequently dried before solid state synthesis.
 
 In situ XRD is performed in an Anton Paar XRDynamic 500 diffractometer using Cu K$alpha$ radiation with an Anton Paar HTK 1200N heating chamber. 
+All reactions are performed in air.
 Scans are taken from 7º to 70º during heating with a scan rate of 5 minutes/scan, with rapid heating in between.
 Rietveld refinement and phase identification are done using DARA @fei2026DaraAutomated, which was further extended into `dara-insitu` by the Ceder group at LBL for #lit[in-situ] experiments (manuscript in preparation).
 Phases were selected from the international crystal structure database (ICSD) @zagorac2019RecentDevelopments, the Crystallography Open Database (COD) @grazulis2009CrystallographyOpen, and the Materials Project @jain2013CommentaryMaterials.

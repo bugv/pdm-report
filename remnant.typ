@@ -281,16 +281,17 @@ Of the 5 cases in which experimental data indicates that the phase is entropical
 
 == Extension to >20 meV/atom above the hull
 
-We now extend the previous analysis to phases within the same dataset which yield a phase predicted to be between 20 meV/atom and 50 meV/atom above the hull, once again excluding any reactions involving gases, which includes 46 phases.
+We now extend the previous analysis to 46 phases within the same dataset which yield a phase predicted to be between 20 meV/atom and 50 meV/atom above the hull, once again excluding any reactions involving gases.
 
 Of these 46 phases, 3 contain a hypothetical polymorph in the Materials Project@jain2013CommentaryMaterials predicted to be on the hull (Al2NiO4, LiFeO2, and Al2CoO4), and 1 phase contains Eu (Eu2Ir2O7).
-Based on the discussion in @s_dft_err exclude these 4 phases from the analysis, leaving us with 42 phases to consider.
+Based on the discussion in @s_dft_err we exclude these 4 phases from the analysis, leaving us with 42 phases to consider.
 
-Of these phases, experimental thermochemical data could be easily found for 14 of these phases and their decomposition products, following the procedure outlined in @s_methods_exp_thermo until the third step and only considering sources readily available online.
+Experimental thermochemical data could be easily found for 14 of these phases and their decomposition products.
+To do so, we followed the procedure outlined in @s_methods_exp_thermo until the third step and only considered sources readily available online.
 Reaction energies for the formation of these phases from the decomposition products predicted by the Materials Project are shown in @t_extra_20meV.
 
 Of these 14 phases, 11 have a negative reaction enthalpy from their predicted decomposition products, indicating that they are stable at 0 K and thus linked to inherent error in the DFT computation, while 2 are entropically stabilized (AlFeO3 and TiFe2O5).
-No entropy or Gibbs free energy data could be found for the remaining phase, ZrPbO3, however the associated experimental error has an estimated uncertainty of 9 meV/atom@rane2001EnthalpiesFormation, meaning that the positive reaction energy reported cannot be used to conclude that the phase is unstable at 0 K.
+No entropy or Gibbs free energy data could be found for the remaining phase, ZrPbO3, however the associated experimental error has an estimated uncertainty of 9 meV/atom@rane2001EnthalpiesFormation, meaning that the positive reaction energy reported cannot be used to conclude that the phase is unstable at 0 K either.
 
 Once again, no phases were found to be metastable at synthesis conditions.
 

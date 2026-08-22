@@ -16,7 +16,7 @@ In our case, pressure $p$ and temperature $T$ are controlled, meaning that the G
 ]
 We note that the Gibbs free energy is always relative, and a reference state must be given for each element.
 Typically, the Gibbs free energy is defined relative to the elements in their standard state.
-However, one can also define the Gibbs free energy relative to different reference states as long as they are linearly independent with respect to elements.
+However, one can also define it relative to different reference states as long as they are linearly independent with respect to elements.
 
 
 // Other variables may be considered, for example chemical potential of gaseous species for reactions in set partial pressures, which would yield a thermodynamic grand potential of the system. 
@@ -55,8 +55,8 @@ This can lead to the formation of many out of global equilibrium intermediates, 
 
 In solid state synthesis, the rate limiting kinetic step is diffusion related. @tan2026OriginReaction @kohlmann2019LookingBlack @stein1993TurningHeat @karan2026IonCorrelations
 More specifically, we can distinguish short and medium range interdiffusion at particle-particle interfaces, which is required to trigger nucleation, and the long range diffusion required for growth to occur.
-In practice, this difference can be observed either in some in-situ experiments where two regimes are observed @kamm2022RelativeKinetics @tan2026OriginReaction or in experiments with varying particle size @kupp2014ParticleSize, where the onset of phase formation is the same regardless of particle size while reaction completion happens at lower temperatures for smaller particle sizes for which less range transport is required.
-However, since both of these regimes are closely related and are related to the same energy scale, they do not necessarily need to be distinguished in practice. 
+In practice, this difference can be observed either in some in-situ experiments where two regimes are observed @kamm2022RelativeKinetics @tan2026OriginReaction or in experiments with varying particle size @kupp2014ParticleSize, where the onset of phase formation is the same regardless of particle size while reaction completion happens at lower temperatures for smaller particles for which less range transport is required.
+However, since both of these regimes are closely related and are can be associated to the same energy scale, they do not necessarily need to be distinguished in practice. 
 
 Directly obtaining data on atomic diffusion in materials is complicated, whether it be experimentally or computationally.
 Therefore, in order to better explain kinetic factors in solid state synthesis, heuristics and estimations have been proposed to estimate reaction onset.
